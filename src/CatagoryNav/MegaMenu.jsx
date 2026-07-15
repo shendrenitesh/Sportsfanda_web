@@ -1,49 +1,18 @@
 const MegaMenu = ({ sections }) => {
   return (
-    <div
-      className="
-      absolute
-      left-0
-      top-full
-      w-full
-      bg-white
-      shadow-lg
-      border-t
-      z-50
-      "
-    >
-      <div
-        className="
-        max-w-7xl
-        mx-auto
-        px-8
-        py-10
-        grid
-        grid-cols-5
-        gap-10
-        "
-      >
+    <div className="z-50 border-t border-gray-200 bg-white/95 shadow-lg md:absolute md:left-0 md:top-full md:w-full">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-3 py-5 sm:grid-cols-2 sm:px-4 sm:py-6 lg:grid-cols-5 lg:px-6 lg:py-8">
         {sections.map((section) => (
           <div key={section.title}>
-            <h3
-              className="
-              text-xl
-              font-semibold
-              mb-4
-              "
-            >
+            <h3 className="mb-3 text-lg font-semibold text-gray-900">
               {section.title}
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {section.items.map((item) => (
                 <li
                   key={item}
-                  className="
-                  text-gray-600
-                  hover:text-blue-600
-                  cursor-pointer
-                  "
+                  className="cursor-pointer text-sm text-gray-600 transition hover:text-blue-600"
                 >
                   {item}
                 </li>

@@ -42,23 +42,25 @@ const SportsCarousel = () => {
         pagination={{ clickable: true }}
         navigation
         loop={true}
-        className="rounded-xl overflow-hidden"
+        className="overflow-hidden rounded-2xl shadow-sm"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-105">
+            <div className="relative h-[280px] sm:h-[360px] lg:h-[470px]">
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
 
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white">
-                <h2 className="text-5xl font-bold mb-4">{slide.title}</h2>
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 px-4 text-center text-white sm:px-8">
+                <h2 className="mb-3 text-2xl font-bold sm:mb-4 sm:text-4xl lg:text-5xl">
+                  {slide.title}
+                </h2>
 
-                <p className="text-xl">{slide.subtitle}</p>
+                <p className="text-base sm:text-xl">{slide.subtitle}</p>
 
-                <button className="mt-6 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium">
+                <button className="mt-4 rounded-lg bg-blue-600 px-4 py-2 font-medium transition hover:bg-blue-700 sm:mt-6 sm:px-6 sm:py-3">
                   Explore Now
                 </button>
               </div>

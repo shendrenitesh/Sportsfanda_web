@@ -63,34 +63,42 @@ const CategoryNav = () => {
     ],
   };
 
+  const handleMenuToggle = (menu) => {
+    setActiveMenu((current) => (current === menu ? null : menu));
+  };
+
   return (
-    <div className="relative border-b">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex gap-10 h-14 items-center">
+    <div className="relative border-b border-gray-200 bg-white">
+      <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
+        <div className="flex h-14 items-center gap-3 overflow-x-auto whitespace-nowrap sm:gap-6 md:gap-8">
           <button
             onMouseEnter={() => setActiveMenu("sports")}
-            className="hover:text-blue-600"
+            onClick={() => handleMenuToggle("sports")}
+            className="shrink-0 rounded-full px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
           >
             All Sports
           </button>
 
           <button
             onMouseEnter={() => setActiveMenu("men")}
-            className="hover:text-blue-600"
+            onClick={() => handleMenuToggle("men")}
+            className="shrink-0 rounded-full px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
           >
             Men
           </button>
 
           <button
             onMouseEnter={() => setActiveMenu("women")}
-            className="hover:text-blue-600"
+            onClick={() => handleMenuToggle("women")}
+            className="shrink-0 rounded-full px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
           >
             Women
           </button>
 
           <button
             onMouseEnter={() => setActiveMenu("kids")}
-            className="hover:text-blue-600"
+            onClick={() => handleMenuToggle("kids")}
+            className="shrink-0 rounded-full px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
           >
             Kids
           </button>
@@ -105,4 +113,5 @@ const CategoryNav = () => {
     </div>
   );
 };
+
 export default CategoryNav;

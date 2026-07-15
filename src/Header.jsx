@@ -9,34 +9,43 @@ import {
 
 const Header = () => {
   return (
-    <header className="h-18 flex items-center justify-between px-6 bg-white border-b border-gray-200 gap-5">
-      {/* Logo */}
-      <div className="flex items-center shrink-0">
-        <img
-          src="/logo.png"
-          alt="Sportsfanda"
-          className="h-10 object-contain"
-        />
-      </div>
+    <header className="border-b border-gray-200 bg-white/95 backdrop-blur">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-3 py-3 sm:px-4 lg:flex-row lg:items-center lg:justify-between lg:px-6 lg:py-4">
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex shrink-0 items-center">
+            <img
+              src="/logo.png"
+              alt="Sportsfanda"
+              className="h-9 object-contain sm:h-10"
+            />
+          </div>
 
-      {/* Search Bar */}
-      <div className="flex-1 max-w-175 relative">
-        <FiSearch className="absolute left-4.5 top-1/2 -translate-y-1/2 text-gray-500 text-lg" />
+          <div className="flex items-center gap-2 lg:hidden">
+            <button className="rounded-full p-2 text-gray-700 transition hover:bg-gray-100">
+              <FiSearch size={18} />
+            </button>
+            <button className="rounded-full p-2 text-gray-700 transition hover:bg-gray-100">
+              <FiShoppingCart size={18} />
+            </button>
+          </div>
+        </div>
 
-        <input
-          type="text"
-          placeholder='Search for "Cricket"'
-          className="w-full h-11 rounded-full bg-gray-100 pl-12.5 pr-5 text-[15px] outline-none focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
+        <div className="relative w-full lg:max-w-[640px] lg:flex-1">
+          <FiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
+          <input
+            type="text"
+            placeholder='Search for "Cricket"'
+            className="h-11 w-full rounded-full border border-gray-200 bg-gray-100 pl-11 pr-4 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100 sm:text-[15px]"
+          />
+        </div>
 
-      {/* Navigation */}
-      <div className="flex items-center gap-6">
-        <NavItem icon={<FiUser size={20} />} label="Sign In" />
-        <NavItem icon={<FiGrid size={20} />} label="My Store" />
-        <NavItem icon={<FiHelpCircle size={20} />} label="Support" />
-        <NavItem icon={<FiHeart size={20} />} label="Wishlist" />
-        <NavItem icon={<FiShoppingCart size={20} />} label="Cart" />
+        <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-3 lg:justify-end">
+          <NavItem icon={<FiUser size={18} />} label="Sign In" />
+          <NavItem icon={<FiGrid size={18} />} label="My Store" />
+          <NavItem icon={<FiHelpCircle size={18} />} label="Support" />
+          <NavItem icon={<FiHeart size={18} />} label="Wishlist" />
+          <NavItem icon={<FiShoppingCart size={18} />} label="Cart" />
+        </div>
       </div>
     </header>
   );
@@ -44,7 +53,7 @@ const Header = () => {
 
 const NavItem = ({ icon, label }) => {
   return (
-    <div className="flex flex-col items-center cursor-pointer text-[13px] text-gray-800 hover:text-[#0078ff] transition-colors duration-200">
+    <div className="flex min-w-[70px] flex-col items-center gap-1 rounded-lg px-2 py-2 text-center text-[11px] text-gray-700 transition hover:text-[#0078ff] sm:text-[12px]">
       <div>{icon}</div>
       <span>{label}</span>
     </div>
