@@ -9,7 +9,7 @@ import {
 
 const Header = () => {
   return (
-    <header className="h-[72px] flex items-center justify-between px-6 bg-white border-b border-gray-200 gap-5">
+    <header className="h-18 flex items-center justify-between px-6 bg-white border-b border-gray-200 gap-5">
       {/* Logo */}
       <div className="flex items-center shrink-0">
         <img
@@ -20,13 +20,13 @@ const Header = () => {
       </div>
 
       {/* Search Bar */}
-      <div className="flex-1 max-w-[700px] relative">
-        <FiSearch className="absolute left-[18px] top-1/2 -translate-y-1/2 text-gray-500 text-lg" />
+      <div className="flex-1 max-w-175 relative">
+        <FiSearch className="absolute left-4.5 top-1/2 -translate-y-1/2 text-gray-500 text-lg" />
 
         <input
           type="text"
           placeholder='Search for "Cricket"'
-          className="w-full h-11 rounded-full bg-gray-100 pl-[50px] pr-5 text-[15px] outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full h-11 rounded-full bg-gray-100 pl-12.5 pr-5 text-[15px] outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
