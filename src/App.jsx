@@ -3,6 +3,8 @@ import Header from "./Header";
 import SportsCarousel from "./SportsCarousel";
 import CategoryNav from "./CatagoryNav/CatagoryNav";
 import DeliveryLocation from "./DeliveryLocation";
+import ProductShowcase from "./Products/ProductShowcase";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <CategoryNav />
         <div className="px-3 py-4 sm:px-4 lg:px-6 lg:py-6">
           <SportsCarousel />
+          <ProductShowcase />
+          <Footer />
         </div>
       </div>
     </div>
