@@ -12,12 +12,16 @@ const Header = () => {
     <header className="border-b border-gray-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-3 py-3 sm:px-4 lg:flex-row lg:items-center lg:justify-between lg:px-6 lg:py-4">
         <div className="flex items-center justify-between gap-3">
-          <div className="flex shrink-0 items-center">
+          {/* <div className="flex shrink-0 items-center">
             <img
               src="/logo.png"
               alt="Sportsfanda"
               className="h-9 object-contain sm:h-10"
             />
+          </div> */}
+          <div className="text-2xl font-bold mb-4">
+            <span className="text-blue-500">Sports</span>
+            <span className="text-orange-500">fanda</span>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
@@ -42,7 +46,7 @@ const Header = () => {
         <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-3 lg:justify-end">
           <NavItem icon={<FiUser size={18} />} label="Sign In" />
           <NavItem icon={<FiGrid size={18} />} label="My Store" />
-          <NavItem icon={<FiHelpCircle size={18} />} label="Support" />
+          {/* <NavItem icon={<FiHelpCircle size={18} />} label="Support" /> */}
           <NavItem icon={<FiHeart size={18} />} label="Wishlist" />
           <NavItem icon={<FiShoppingCart size={18} />} label="Cart" />
         </div>
